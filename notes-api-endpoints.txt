@@ -1,0 +1,64 @@
+Service Information
+service: notes-api
+stage: prod
+region: us-east-1
+stack: notes-api-prod
+resources: 32
+api keys:
+  None
+endpoints:
+  POST - https://j8c49uamw6.execute-api.us-east-1.amazonaws.com/prod/notes
+  GET - https://j8c49uamw6.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  GET - https://j8c49uamw6.execute-api.us-east-1.amazonaws.com/prod/notes
+  PUT - https://j8c49uamw6.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+  DELETE - https://j8c49uamw6.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+functions:
+  create: notes-api-prod-create
+  get: notes-api-prod-get
+  list: notes-api-prod-list
+  update: notes-api-prod-update
+  delete: notes-api-prod-delete
+layers:
+  None
+
+////////////////////////////////////////
+API Gateway
+
+id
+j8c49uamw6
+invoke URL
+https://j8c49uamw6.execute-api.us-east-1.amazonaws.com/prod
+
+
+
+
+////////////////////////////////////////
+Cognito
+
+user pool
+Pool Id 
+us-east-1_bA5vGa1GW
+Pool ARN 
+arn:aws:cognito-idp:us-east-1:763178544191:userpool/us-east-1_bA5vGa1GW
+
+identity pool
+id 
+us-east-1:860df5ce-ecb9-459f-a9c9-e36ecc0ce6a4
+
+app client ID
+36o49ge8isdgtdlrjs1e9iip16
+
+ ////////////////////////////////////////
+S3
+
+bucket name: 
+notes-app-uploads-rammina
+
+
+
+/////////////////////////////////////////
+stripe
+publishable key
+pk_test_51HuvlhH0GxnacGIVcDo6nNFJyrqaIWfmAdDWA7xn1vQHA42Lac4pbCCo5DSxUQPYabhx8hzYs3K1u5ahkr9crWER00DOtt9w9C
+secret key
+sk_test_51HuvlhH0GxnacGIVfcoKk0BMEODQP5Fab3UTVHbvZSXpimexgQ3PccXdbF9ndNJVq9ROKdFPmzvi9QlrP6qW033t00bYeibeEI
