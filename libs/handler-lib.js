@@ -1,5 +1,5 @@
 export default function handler(lambda) {
-  return async function(event, context) {
+  return async function (event, context) {
     let body, statusCode;
 
     try {
@@ -13,10 +13,14 @@ export default function handler(lambda) {
       statusCode = 500;
     }
 
-    // Return HTTP response
+    // Return HTTP response w/ CORS
     return {
       statusCode,
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
     };
   };
 }
